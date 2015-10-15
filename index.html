@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Matthew Tomney Resume</title>
+		<meta charset="utf-8">
+		<link href="css/style.css" rel="stylesheet">
+		<script src="js/jQuery.js"></script>
+		<script src="js/helper.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+		<script src="js/bootstrap.js"></script>
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<div class="navbar navbar-inverse">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Projects<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Project 1: Project Portfolio</a></li>
+								<li><a href="#">Project 2: Online Resume</a></li>
+								<li><a href="#">Project 3: Frogger Video Game</a></li>
+								<li><a href="#">Project 4: Website Optimization</a></li>
+								<li><a href="#">Project 5: Neighborhood Map</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Project Portfolio</a></li>
+						<li><a href="#contact" data-toggle="modal">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<div id="header1" class="center-content clear-fix">
+				<ul id="topContacts" class="flex-box"></ul>
+			</div>
+			<div style="clear: both;"></div>
+				<div id="workExperience" class="gray">
+					<h2>Work Experience</h2>
+				</div>
+				<div id="projects">
+					<h2>Projects</h2>
+				</div>
+				<div id="education" class="gray">
+					<h2>Education</h2>
+				</div>
+				<div id="mapDiv">
+					<h2>Where I've Lived and Worked</h2>
+				</div>
+				<div id="lets-connect" class="dark-gray">
+					<h2 class="orange center-text">Looking forward to connecting!</h2>
+					<ul id="footerContacts" class="flex-box">
+					</ul>
+				</div>
+			</div>
+		</div>
+	<script src="js/resumeBuilder.js"></script>
+	<script type="text/javascript">
+		if(document.getElementsByClassName('flex-item').length===0) {
+			document.getElementById('topContacts').style.display='none';
+		}
+		if(document.getElementsByTagName('h1').length===0) {
+			document.getElementById('header').style.display='none';
+		}
+		if(document.getElementsByClassName('work-entry').length===0) {
+			document.getElementById('workExperience').style.display='none';
+		}
+		if(document.getElementsByClassName('project-entry').length===0) {
+			document.getElementById('projects').style.display='none';
+		}
+		if(document.getElementsByClassName('education-entry').length===0) {
+			document.getElementById('education').style.display='none';
+		}
+		if(document.getElementsByClassName('flex-item').length===0) {
+			document.getElementById('lets-connect').style.display='none';
+		}
+		if(document.getElementById('map')===null) {
+			document.getElementById('mapDiv').style.display='none';
+		}
+	</script>
+	<div class="modal fade" id="contact" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form class="form-horizontal">
+					<div class="modal-header">
+						<h4>Contact Matthew Tomney</h4>
+					</div>
+					<div class="modal-body">
+						<p>Thank you for deciding to contact me, I will get back to you as soon as possible!</p>
+							<div class="form-group">
+								<label for="contact-name" class="col-lg-2 control-label">Name:</label>
+								<div class="col-lg-10">
+									<input type="text" class="form-control" id="contact-name" placeholder="Full Name"></input>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contact-email" class="col-lg-2 control-label">Email:</label>
+								<div class="col-lg-10">
+									<input type="email" class="form-control" id="contact-email" placeholder="i.e. you@example.com"></input>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="contact-msg" class="col-lg-2 control-label">Message:</label>
+								<div class="col-lg-10">
+									<textarea class="form-control" rows="8"></textarea>
+								</div>
+							</div>
+						<div class="modal-footer">
+							<a class="btn btn-default" data-dismiss="modal">Cancel</a>
+							<button class="btn btn-primary" type="submit">Send Message</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
